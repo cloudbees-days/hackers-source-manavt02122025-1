@@ -203,7 +203,7 @@ jobs:
             **Artifact ID:** ${{ needs.build-container-image.outputs.ARTIFACT_ID }}
           format: MARKDOWN
       - name: Register deployed artifact
-        uses: cloudbees-io/register-deployed-artifact@v2
+        uses: cloudbees-io/register-deployed-artifact@vf_debug_failure
         with:
           artifact-id: ${{ needs.build-container-image.outputs.ARTIFACT_ID }}
           target-environment: DOW Production
